@@ -11,3 +11,28 @@ body{
   background-position: center;
   background-attachment: fixed;
 }
+
+.banner{
+  background-color: #F2F9FF;
+  min-height: 50vh;
+}
+
+.display{
+  margin-top: 10vh;
+}
+
+.bg-text{
+  background-color: #F6464E;
+  color: #fff;
+  padding: 0.5vh 1vh;
+}
+
+.fas{
+  color: #F6464E;
+}
+
+.inspire{
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+}

@@ -1,1 +1,28 @@
 {% extends 'base.html' %}
+
+{% block content %}
+  <div class="banner container-fluid">
+    <div class="row">
+      <div class="col-md-6 display">
+        <h4 style="font-weight: bold;"><span class="bg-text">Daily</span> Quotes <i class="fas fa-angle-double-right"></i></h4>
+        <blockquote class="blockquote-inverse mb-0">
+          <p style="font-size: 180%; font-weight:bold;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis, recusandae?</p>
+          <footer class="blockquote-footer">By <cite title="Source Title">Jalis</cite></footer>
+        </blockquote>
+      </div>
+      <div class="col-md-6">
+        <img src="../static/images/Inspire.jpeg" class="inspire rounded" alt="">
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 newsletter" style="margin-top: 15vh;">
+        <h2>Subscribe to my Newsletter</h2>
+        <p>For weekly updates and latest blogs</p>
+      </div>
+      <div class="col-md-6"></div>
+    </div>
+  </div>
+{% endblock %}
