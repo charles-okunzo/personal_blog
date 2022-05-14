@@ -17,7 +17,7 @@ def create_app(config_name):
 
 
   #initialise extension
-  bootstrap.init_app(bootstrap)
+  bootstrap.init_app(app)
 
 
   #register blueprint
