@@ -4,6 +4,12 @@
 .navbar-brand{
   color: #000;
 }
+.navbar{
+  background-color: #F2F9FF;
+}
+.icon-bar{
+  background-color: #000;
+}
 body{
   background-image: url(../images/background.png);
   background-size: cover;
@@ -76,5 +82,32 @@ h6.card-title{
 }
 
 .card{
-  box-shadow: 5vh 3vh 5vh 10px #969694;
+  box-shadow: 3vh 1vh 3vh 1px #969694;
+  border-radius: 3%;
+}
+
+footer{
+  background-color: #F6464E;
+  margin-top: 5vh;
+  
+}
+footer li a{
+  color: #F2F9FF !important;
+  padding: 5vh 0;
+}
+
+footer li a:hover{
+  color: #000 !important;
+}
+
+.fab{
+  padding: 0 1vw;
+  color: #F2F9FF;
+  cursor: pointer;
+  font-size: 1.5em;
+  margin-top: 2vh;
+}
+
+.fab:hover{
+  color: #000 !important;
 }
