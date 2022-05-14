@@ -36,3 +36,45 @@ body{
   max-height: 100%;
   object-fit: cover;
 }
+
+.newsletter{
+  background-color: #F2F9FF;
+}
+
+.btn{
+  background-color: #F6464E;
+  color: #fff;
+}
+
+.btn:hover{
+  color: #F2F9FF;
+}
+
+hr{
+  width: 8vw;
+  background-color: #F6464E;
+  height: 1vh;
+  margin: 0 0 5vh 0;
+}
+
+.heading{
+  font-weight: bold;
+}
+
+h6.card-title{
+  color: #F6464E;
+  width: auto;
+  font-weight: bold;
+}
+
+.card-img-top{
+  width: 100%;
+}
+
+.card-text, .card-title{
+  padding: 1vh 3vh;
+}
+
+.card{
+  box-shadow: 5vh 3vh 5vh 10px #969694;
+}
