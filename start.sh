@@ -1,1 +1,0 @@
-export DATABASE_URL='postgresql+psycopg2://moringa:okunzo254@localhost/blog'
