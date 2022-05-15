@@ -2,7 +2,7 @@
 
 
 class Config:
-  pass
+  RANDOM_QUOTE_URL='http://quotes.stormconsultancy.co.uk/random.json'
 
 
 class ProdConfig(Config):
