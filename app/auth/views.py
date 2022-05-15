@@ -1,3 +1,5 @@
+from curses import flash
+from flask_login import login_required, login_user, logout_user
 from app import db
 from flask import render_template, redirect,url_for,request
 from app.models import User
@@ -21,4 +23,26 @@ def signup():
 
     return redirect(url_for('auth.login'))
 
-  return render_template('signup.html', login_form=form, title=title)
+  return render_template('auth/signup.html', login_form=form, title=title)
+
+
+@auth.route('/login', methods=['POST','GET'])
+def signin():
+  title = 'PersonalBlog | Sign In'
+  form= LoginForm()
+  if form.validate_on_submit():
+    user=User.query.filter_by(email=form.email.data).first()
+    if user is not None and user.validate_password(form.password):
+      login_user(user, form.remember.data)
+      return redirect(request.args.get('next') or url_for('main.index'))
+    flash('Invalid username or password')
+
+  return render_template('auth/signin.html', sign_form=form, title=title)
+
+
+@auth.route('/logout')
+@login_required
+def logout():
+  logout_user()
+
+  return redirect(url_for('main.index'))
