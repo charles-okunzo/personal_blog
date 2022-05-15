@@ -33,4 +33,4 @@ def new_post():
     
     return redirect(url_for('main.blogs_page'))
 
-  return render_template('new_post_form.html')
+  return render_template('new_post_form.html', title=title, post_form=form)

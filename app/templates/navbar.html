@@ -15,7 +15,7 @@
               <li><a href="" >About</a></li>
               <li><a href="">Blogs</a></li>
               {% if current_user.is_authenticated %}
-              <li><a href="">Post Blog</a></li>
+              <li><a href="{{url_for('main.new_post')}}">Post Blog</a></li>
               <li class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Signed In<span class="caret"></span></a>
                 <ul class="dropdown-menu">
