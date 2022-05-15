@@ -1,0 +1,3 @@
+start.sh
+*.env
+__pychache__/
