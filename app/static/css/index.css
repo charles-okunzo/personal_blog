@@ -111,3 +111,45 @@ footer li a:hover{
 .fab:hover{
   color: #000 !important;
 }
+
+.signin{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 0 15vh;
+  background-color: #F2F9FF;
+}
+
+input[type='submit']{
+  width: 100%;
+}
+
+input[type='submit']:hover{
+  color: #000;
+  background-color: #F2F9FF;
+}
+
+input[type='text'], input[type='password']{
+  border-style: none;
+  border-bottom: 2px solid #F6464E;
+  background-color: transparent;
+}
+
+input[type='text']:focus, input[type='password']:focus{
+ 
+  background-color: transparent;
+}
+
+.signin-bg{
+  background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(../images/pexels-photo-4348403.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+@media only screen and (max-width:678px){
+  .signin-bg{
+    display: none;
+  }
+}

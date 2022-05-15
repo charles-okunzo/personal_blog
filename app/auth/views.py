@@ -37,7 +37,7 @@ def signin():
       return redirect(request.args.get('next') or url_for('main.index'))
     flash('Invalid username or password')
 
-  return render_template('auth/signin.html', sign_form=form, title=title)
+  return render_template('auth/signin.html', signin_form=form, title=title)
 
 
 @auth.route('/logout')
