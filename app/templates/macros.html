@@ -1,4 +1,5 @@
 {% macro displayBlog(blogs) %}
+{% if blogs %}
   {% for blog in blogs %}
     <h5><span class="bg-text">{{blog.category}}</span></h5>
     <h2 style="font-size:1.2em;">{{blog.title}}</h2>
@@ -8,4 +9,7 @@
       {{blog.post}}
     </p>
   {% endfor %}
+  {% else %}
+        <h5 style="text-align: center; font-size:1.5em;">No blogs Posted yet. <a href="{{url_for('main.new_post')}}"><i style="text-align:center ;color: #F6464E;" class="fa-solid fa-plus"></i> Add blogs</a></h5>
+  {% endif %}
 {% endmacro %}

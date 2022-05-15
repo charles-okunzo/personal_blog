@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% import 'macros.html' as macro %}
 
 {% block navbar %}
   {% include 'navbar.html' %}
@@ -12,6 +13,16 @@
       <h1 style="text-align: center; font-weight:bold;  color:#F6464E"><span class="bg-text">OUR</span> BLOGS</h1>
     </div>
     <div class="col-md-4"></div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-1"></div>
+    <div class="col-md-10" style="background-color: #F2F9FF;">
+      {{macro.displayBlog(blogs)}}
+    </div>
+    <div class="col-md-1"></div>
   </div>
 </div>
 {% endblock %}
