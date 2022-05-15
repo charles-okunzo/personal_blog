@@ -9,6 +9,7 @@ flask-bootstrap = "*"
 flask-sqlalchemy = "*"
 flask-script = "*"
 python-dotenv = "*"
+psycopg2-binary = "*"
 
 [dev-packages]
 
