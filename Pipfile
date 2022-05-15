@@ -12,6 +12,7 @@ python-dotenv = "*"
 psycopg2-binary = "*"
 flask-login = "*"
 flask-migrate = "*"
+flask-wtf = "*"
 
 [dev-packages]
 
