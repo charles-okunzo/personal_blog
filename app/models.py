@@ -52,6 +52,7 @@ class BlogPost(db.Model):
 
   id = db.Column(db.Integer, primary_key=True)
   title = db.Column(db.String(255), nullable=False)
+  category = db.Column(db.String, nullable = False)
   post = db.Column(db.String, nullable=False)
   date = db.Column(db.DateTime, default=datetime.now())
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
