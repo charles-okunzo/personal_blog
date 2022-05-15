@@ -10,6 +10,7 @@ flask-sqlalchemy = "*"
 flask-script = "*"
 python-dotenv = "*"
 psycopg2-binary = "*"
+flask-login = "*"
 
 [dev-packages]
 
