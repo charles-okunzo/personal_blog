@@ -1,3 +1,4 @@
+from crypt import methods
 from unicodedata import category
 from flask_login import login_required
 from app import db
@@ -17,7 +18,7 @@ def index():
 
 
 
-@main.route('/new-post')
+@main.route('/new-post', methods=['POST', 'GET'])
 @login_required
 def new_post():
   title = 'PersonalBlog | Create a new Blog post.'
@@ -34,3 +35,10 @@ def new_post():
     return redirect(url_for('main.blogs_page'))
 
   return render_template('new_post_form.html', title=title, post_form=form)
+
+
+@main.route('/posts')
+def blogs_page():
+  title='PersonalBlog | Blog posts'
+
+  return render_template('blogs.html')

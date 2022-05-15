@@ -13,7 +13,7 @@
           <ul class="nav navbar-nav">
               <li><a href="/">Home</a></li>
               <li><a href="" >About</a></li>
-              <li><a href="">Blogs</a></li>
+              <li><a href="{{url_for('main.blogs_page')}}">Blogs</a></li>
               {% if current_user.is_authenticated %}
               <li><a href="{{url_for('main.new_post')}}">Post Blog</a></li>
               <li class="dropdown">

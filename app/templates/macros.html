@@ -1,0 +1,11 @@
+{% macro displayBlog(blogs) %}
+  {% for blog in blogs %}
+    <h5><span class="bg-text">{{blog.category}}</span></h5>
+    <h2 style="font-size:1.2em;">{{blog.title}}</h2>
+    <small>Posted on {{blog.date}}</small>
+    <footer class="blockquote-footer">By <cite title="Source Title">{{blog.users.username}}</cite></footer>
+    <p>
+      {{blog.post}}
+    </p>
+  {% endfor %}
+{% endmacro %}

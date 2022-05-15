@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block navbar %}
+  {% include 'navbar.html' %}
+{% endblock %}
+
+{% block content %}
+<div class="container-fluid">
+  <div class="row blog-banner">
+    <div class="col-md-4"></div>
+    <div class="col-md-4" style="display: grid; place-items:center; min-height:50vh;">
+      <h1 style="text-align: center; font-weight:bold;  color:#F6464E"><span class="bg-text">OUR</span> BLOGS</h1>
+    </div>
+    <div class="col-md-4"></div>
+  </div>
+</div>
+{% endblock %}
