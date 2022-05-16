@@ -16,4 +16,18 @@
   {% else %}
         <h5 style="text-align: center; font-size:1.5em;">No blogs Posted yet. <a href="{{url_for('main.new_post')}}"><i style="text-align:center ;color: #F6464E;" class="fa-solid fa-plus"></i> Add blogs</a></h5>
   {% endif %}
+
+
+
+  {% for comment in comments %}
+    <div class="card">
+      <div class="card-body">
+        <blockquote class="blockquote mb-0">
+          <p>{{comment.comment}}</p>
+          <footer class="blockquote-footer">By <cite title="Source Title">{{comment.user.username}}</cite></footer>
+        </blockquote>
+      </div>
+    </div><hr>
+    {% endfor %}
+
 {% endmacro %}
