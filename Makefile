@@ -1,5 +1,5 @@
 run :
-				python3 app.py server
+				python3 manage.py server
 
 
 
