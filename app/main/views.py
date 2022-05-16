@@ -1,6 +1,6 @@
 from crypt import methods
 from unicodedata import category
-from flask_login import login_required
+from flask_login import current_user, login_required
 from app import db
 from app.main.forms import BlogForm
 from app.models import BlogPost
@@ -27,8 +27,9 @@ def new_post():
     title=form.title.data
     category=form.category.data
     post=form.post.data
+    user_id=current_user._get_current_object().id
 
-    new_post_obj=BlogPost(title=title, category=category, post=post)
+    new_post_obj=BlogPost(title=title, category=category, post=post, user_id=user_id)
     db.session.add(new_post_obj)
     db.session.commit()
     
@@ -40,5 +41,6 @@ def new_post():
 @main.route('/posts')
 def blogs_page():
   title='PersonalBlog | Blog posts'
+  blogs =  BlogPost.query.all()
 
-  return render_template('blogs.html')
+  return render_template('blogs.html', title=title, blogs=blogs)

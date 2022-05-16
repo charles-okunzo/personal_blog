@@ -81,6 +81,15 @@ h6.card-title{
   padding: 1vh 3vh;
 }
 
+.card-body{
+  transition: all 500ms ease-in-out;
+}
+.card-body:hover{
+  background-color: #F2F9FF;
+  transform: translate(0, -5px);
+  cursor: pointer;
+}
+
 .card{
   box-shadow: 3vh 1vh 3vh 1px #969694;
   border-radius: 3%;
