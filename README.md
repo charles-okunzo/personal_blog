@@ -33,7 +33,7 @@ To get the code..
   ```
 2. Move to the folder and install requirements
   ```bash
-  cd pitch_board
+  cd personal_blog
   ```
 3. Exporting Configurations
   ```bash

@@ -2,8 +2,8 @@ from crypt import methods
 from unicodedata import category
 from flask_login import current_user, login_required
 from app import db
-from app.main.forms import BlogForm
-from app.models import BlogPost
+from app.main.forms import BlogForm, CommentForm
+from app.models import BlogPost, Comment
 from . import main
 from flask import render_template, url_for, request, redirect
 from ..requests import get_random_quotes
@@ -44,3 +44,19 @@ def blogs_page():
   blogs =  BlogPost.query.all()
 
   return render_template('blogs.html', title=title, blogs=blogs)
+
+
+@main.route('/comments', methods=['POST', 'GET'])
+def new_comment():
+  title = 'PersonalBlog | Leave a Comment'
+  form = CommentForm()
+  if form.validate_on_submit():
+    comment = form.comment.data
+    user_id = current_user._get_current_object().id
+
+    new_comment_obj = Comment(comment=comment, user_id=user_id)
+    db.session.add(new_comment_obj)
+    db.session.commit()
+    return redirect(url_for('main.comments_page'))
+
+  return render_template('comment_form.html', comment_form=form, title=title)
