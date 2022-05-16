@@ -27,7 +27,7 @@
           <p>{{comment.comment}}</p>
           <footer class="blockquote-footer">By <cite title="Source Title">{{comment.user.username}}</cite></footer>
           
-            <p><a href="" title="Delete comment"><i class="fa-solid fa-trash-can"></i></a></p>
+            <p><a href="{{url_for('main.delete_comment', comment_id=comment.id)}}" title="Delete comment"><i class="fa-solid fa-trash-can"></i></a></p>
           
         </blockquote>
       </div>

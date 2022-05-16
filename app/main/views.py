@@ -63,3 +63,10 @@ def new_comment():
 
   return render_template('comment_form.html', comment_form=form, title=title, comments=comments)
 
+@main.route('/delete/<int:comment_id>')
+def delete_comment(comment_id):
+  comment = Comment.query.filter_by(id=comment_id).first()
+  db.session.delete(comment)
+  db.session.commit()
+
+  return redirect(url_for('main.new_comment'))
