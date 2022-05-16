@@ -1,14 +1,17 @@
 {% macro displayBlog(blogs) %}
 {% if blogs %}
   {% for blog in blogs %}
+   <div style="margin:10vh 0 ;">
     <h5><span class="bg-text">{{blog.category}}</span></h5>
     <h2 style="font-size:1.5em; font-weight: bold;">{{blog.title}}</h2>
-    <small>Posted on {{blog.date}}</small>
+    <small style="margin: 5vh 0;">Posted on {{blog.date}}</small>
     <footer class="blockquote-footer">By <cite title="Source Title">{{blog.user.username}}</cite></footer>
     <p>
       {{blog.post}}
     </p>
+    <p style="padding:5vh 0 ;"><a href=""><i class="fa-solid fa-comments"></i> Leave a comment</a></p>
     <hr>
+   </div>
   {% endfor %}
   {% else %}
         <h5 style="text-align: center; font-size:1.5em;">No blogs Posted yet. <a href="{{url_for('main.new_post')}}"><i style="text-align:center ;color: #F6464E;" class="fa-solid fa-plus"></i> Add blogs</a></h5>

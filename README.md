@@ -45,7 +45,6 @@ To get the code..
   ```bash
   run command... make run
 
-  ./start.sh
   ```
 5. Testing the application
   ```bash

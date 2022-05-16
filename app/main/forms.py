@@ -10,3 +10,8 @@ class BlogForm(FlaskForm):
   category = SelectField('Category:', choices=[('Lifestyle'), ('Design'), ('Career')])
   post = TextAreaField('Your post:', validators=[DataRequired()])
   submit = SubmitField('Post')
+
+
+class CommentForm(FlaskForm):
+  comment = TextAreaField('Your Comment:', validators=[DataRequired()])
+  submit = SubmitField('Post')
