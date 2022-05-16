@@ -10,7 +10,6 @@ class Config:
   SQLALCHEMY_TRACK_MODIFICATIONS=False
   SECRET_KEY=os.getenv('SECRET_KEY')
 
-
 class ProdConfig(Config):
   SQLALCHEMY_DATABASE_URI=os.getenv('DATABASE_URL')
   if SQLALCHEMY_DATABASE_URI and SQLALCHEMY_DATABASE_URI.startswith('postgres://'):

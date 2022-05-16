@@ -38,7 +38,7 @@ def new_post():
   return render_template('new_post_form.html', title=title, post_form=form)
 
 
-@main.route('/posts')
+@main.route('/posts', methods=['GET'])
 def blogs_page():
   title='PersonalBlog | Blog posts'
   blogs =  BlogPost.query.all()
