@@ -47,6 +47,7 @@ def blogs_page():
 
 
 @main.route('/comments', methods=['POST', 'GET'])
+@login_required
 def new_comment():
   title = 'PersonalBlog | Leave a Comment'
   comments = Comment.query.all()
@@ -58,6 +59,7 @@ def new_comment():
     new_comment_obj = Comment(comment=comment, user_id=user_id)
     db.session.add(new_comment_obj)
     db.session.commit()
-    return redirect(url_for('main.comments_page'))
+    return redirect(url_for('main.new_comment'))
 
   return render_template('comment_form.html', comment_form=form, title=title, comments=comments)
+

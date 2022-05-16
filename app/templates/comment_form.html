@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% import 'bootstrap/wtf.html' as  wtf %}
+{% import 'macros.html' as macro %}
 
 
 {% block navbar %}
@@ -17,8 +18,8 @@
           {{macro.displayComment(comments)}}
         </div>
         <div class="col-md-4">
-        <h2 style="text-align: center; color: #2f5280;">LEAVE A COMMENT</h2><hr>
-          {{wtf.quick_form(form)}}
+        <h2 style="text-align: center; margin-bottom: 10vh;"><span class="bg-text">LEAVE</span> A COMMENT</h2>
+          {{wtf.quick_form(comment_form)}}
         </div>
       <div class="col-md-2"></div>
     </div>
