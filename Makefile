@@ -1,7 +1,7 @@
 run :
-				python3 manage.py server
+				python3 app.py server
 
 
 
 dbshell:
-				python3 manage.py shell
+				python3 app.py shell
