@@ -9,7 +9,7 @@
     <p>
       {{blog.post}}
     </p>
-    <p style="padding:5vh 0 ;"><a href="{{url_for('main.new_comment')}}"><i class="fa-solid fa-comments"></i> Leave a comment</a></p>
+    <p style="padding:5vh 0 ;"><a href="{{url_for('main.new_comment', blogpost_id=blog.id)}}"><i class="fa-solid fa-comments"></i> Leave a comment</a></p>
     <hr>
    </div>
   {% endfor %}

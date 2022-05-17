@@ -1,5 +1,3 @@
-from crypt import methods
-from unicodedata import category
 from flask_login import current_user, login_required
 from app import db
 from app.main.forms import BlogForm, CommentForm
@@ -46,9 +44,9 @@ def blogs_page():
   return render_template('blogs.html', title=title, blogs=blogs)
 
 
-@main.route('/comments', methods=['POST', 'GET'])
+@main.route('/comments/<int:blogpost_id>', methods=['POST', 'GET'])
 @login_required
-def new_comment():
+def new_comment(blogpost_id):
   title = 'PersonalBlog | Leave a Comment'
   comments = Comment.query.all()
   form = CommentForm()
@@ -59,7 +57,7 @@ def new_comment():
     new_comment_obj = Comment(comment=comment, user_id=user_id)
     db.session.add(new_comment_obj)
     db.session.commit()
-    return redirect(url_for('main.new_comment'))
+    return redirect(url_for('main.new_comment', blogpost_id=blogpost_id))
 
   return render_template('comment_form.html', comment_form=form, title=title, comments=comments)
 

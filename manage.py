@@ -7,7 +7,7 @@ from flask_migrate import Migrate
 
 
 
-app = create_app('production')
+app = create_app('development')
 # manager = Manager(app)
 migrate = Migrate(app,db)
 
