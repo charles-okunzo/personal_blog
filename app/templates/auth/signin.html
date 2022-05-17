@@ -8,6 +8,11 @@
       <div class="col-md-6 signin">
         <div>
           <h2 style="font-weight: bold; margin-bottom:5vh;"><span class="bg-text">Sign</span>in</h2>
+          {% for message in get_flashed_messages() %}
+        <div class="alert alert-danger">
+        <button type="button" class="close" data-dismiss="alert">&times;</button>
+        {{ message }}
+        </div>
         {{wtf.quick_form(signin_form)}}
         <p style="margin-top: 5vh;">
           New here? <a href="{{url_for('auth.signup')}}">Signup</a>
