@@ -5,3 +5,7 @@ run :
 
 dbshell:
 				python3 app.py shell
+
+
+tests:
+				python3 -m tests.test_user
