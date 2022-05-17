@@ -56,7 +56,7 @@ class BlogPost(db.Model):
   post = db.Column(db.String, nullable=False)
   date = db.Column(db.DateTime, default=datetime.now())
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-  comments = db.relationship('Comment', backref='blogpost', lazy='dynamic')
+ 
 
 
   def __repr__(self):
@@ -70,7 +70,6 @@ class Comment(db.Model):
   id = db.Column(db.Integer, primary_key=True)
   comment = db.Column(db.String)
   user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
-  blogpost_id = db.Column(db.Integer, db.ForeignKey('blogposts.id'))
 
 
 
